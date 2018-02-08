@@ -31,7 +31,7 @@ ADD . /usr/local/docker-demo-image
 
 # AFTER YOU HAVE MOVED ALL THE FILES GO AHEAD CD into the directory and run mvn assembly.
 # Maven assembly will package the project into a JAR FILE which can be executed
-RUN cd /usr/local/docker-demo-image && mvn assembly:assembly
+RUN cd /usr/local/docker-demo-image && mvn install -DskipTests
 
 #THE CMD COMMAND tells docker the command to run when the container is started up from the image. In this case we are
 # executing the java program as is to print Hello World.
