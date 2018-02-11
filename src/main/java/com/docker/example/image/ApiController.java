@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController {
     @RequestMapping("/text/{value}")
     public ResponseEntity<String> profile(@PathVariable("value") String value) {
-        System.out.println(value);
+        System.out.println(value + " >> " + Thread.currentThread().getName());
 
         return new ResponseEntity<>(HttpStatus.OK);
     }

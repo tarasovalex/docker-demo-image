@@ -13,6 +13,7 @@ public class ServiceTask {
 
     @Scheduled(fixedDelay = 5000)
     public void task() {
-        System.out.println("Hello, I'm scheduled task, which print message every 5 sec. " + LocalDateTime.now().toString());
+        System.out.println("Hello, I'm scheduled task, which print message every 5 sec. " + " >> " +
+                Thread.currentThread().getName() + " " + LocalDateTime.now().toString());
     }
 }
