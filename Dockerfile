@@ -23,7 +23,11 @@ RUN apt-get install -y mysql-client
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
 
 #INSTALL ALL the updates again and install MAVEN and JDK 8
-RUN apt-get update && apt-get install -y oracle-java8-installer maven
+RUN add-apt-repository ppa:openjdk-r/ppa
+RUN apt-get update
+RUN apt-get install -y openjdk-8-jdk
+#RUN update-alternatives --config java
+RUN apt-get install -y maven
 
 # ADD a directory called docker-git-hello-world inside the UBUNTU IMAGE where you will be moving all of these files under this
 # DIRECTORY to
