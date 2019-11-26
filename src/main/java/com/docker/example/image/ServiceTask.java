@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Service
 public class ServiceTask {
 
-    @Scheduled(fixedDelay = 20)
+    @Scheduled(fixedDelay = 5000)
     public void task() {
         int randomNum = ThreadLocalRandom.current().nextInt(10, 100 + 1);
         System.out.println("Hello, I'm scheduled task, which print random message every 5 sec. " + " >> " +
