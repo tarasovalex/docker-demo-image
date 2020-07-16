@@ -21,7 +21,7 @@ public class ApiController {
     }
 
     @RequestMapping("/exit/{message}")
-    public void exit(@PathVariable("value") String message) {
+    public void exit(@PathVariable("message") String message) {
         System.out.println("Exit from Application with message: " + message);
 
         System.exit(0);
