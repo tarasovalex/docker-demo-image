@@ -19,4 +19,11 @@ public class ApiController {
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @RequestMapping("/exit/{message}")
+    public void exit(@PathVariable("value") String message) {
+        System.out.println("Exit from Application with message: " + message);
+
+        System.exit(0);
+    }
 }
